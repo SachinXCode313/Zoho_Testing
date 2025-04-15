@@ -22,8 +22,6 @@ function App() {
         if (userData.phone) {
           window.$zoho.salesiq.visitor.contactnumber(userData.phone);
         }
-
-        window.$zoho.salesiq.visitor.pageview("Form Submitted", window.location.href);
       }
     }
 
