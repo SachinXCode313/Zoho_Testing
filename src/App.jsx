@@ -22,6 +22,8 @@ function App() {
         if (userData.phone) {
           window.$zoho.salesiq.visitor.contactnumber(userData.phone);
         }
+
+        window.$zoho.salesiq.visitor.pageview("Form Submitted", window.location.href);
       }
     }
 
@@ -30,6 +32,7 @@ function App() {
     script.src =
       "https://salesiq.zohopublic.in/widget?wc=siq8f44a25f398214d730aca41b275915505efce361876a2b7276b2d134d2def1fe";
     script.defer = true;
+    
     document.body.appendChild(script);
   }, []);
 
