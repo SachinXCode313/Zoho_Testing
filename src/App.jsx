@@ -5,7 +5,7 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
+  
   // Load Zoho widget
   useEffect(() => {
     window.$zoho = window.$zoho || {};
@@ -24,15 +24,15 @@ function App() {
         }
       }
     }
-
     const script = document.createElement("script");
     script.id = "zsiqscript";
     script.src =
-      "https://salesiq.zohopublic.in/widget?wc=siq8f44a25f398214d730aca41b275915505efce361876a2b7276b2d134d2def1fe";
+      "https://salesiq.zohopublic.in/widget?wc=siqe8d7b9a1ff7cf36426a1a8ef4d9a116c229479c52329fb6dfb7126537bcb8ca3";
     script.defer = true;
     
     document.body.appendChild(script);
   }, []);
+
 
   // Handle submit
   const handleSubmit = (e) => {
